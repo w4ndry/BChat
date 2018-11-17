@@ -5,10 +5,21 @@ import { registerScreen } from './src/screens/'
 registerScreen()
 
 Navigation.events().registerAppLaunchedListener(() => {
+  Navigation.setDefaultOptions({
+    topBar: {
+      visible: false,
+      drawBehind: true,
+      animate: false,
+    }
+  });
   Navigation.setRoot({
     root: {
-      component: {
-        name: "WelcomeScreen"
+      stack: {
+        children: [{
+          component: {
+            name: "WelcomeScreen"
+          }
+        }]
       }
     }
   });

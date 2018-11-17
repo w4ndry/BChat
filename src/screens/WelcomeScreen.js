@@ -1,41 +1,49 @@
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import React, { Component } from 'react'
+import { View } from 'react-native'
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import { Navigation } from 'react-native-navigation'
+import { Container, Content, Footer, FooterTab, Button, Text, Body  } from 'native-base'
 
-type Props = {};
-export default class App extends Component<Props> {
+class WelcomeScreen extends Component {
+
+  _goToScreen = () => {
+    Navigation.push(this.props.componentId, {
+      component: {
+        name: 'LoginScreen',
+        passProps: {
+          text: 'Pushed screen'
+        },
+        options: {
+          topBar: {
+            title: {
+              text: 'Pushed screen title'
+            }
+          }
+        }
+      }
+    });
+  }
+  
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to BChat Bro!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
-    );
+    return(
+      <Container>
+
+        <Content padder contentContainerStyle={{ justifyContent: 'center', alignItems: 'center', flex: 1, }}>
+          <Text style={{fontWeight: 'bold', fontSize: 20}}>Welcome</Text>
+          <Text>To</Text>
+          <Text>BChat Bro!</Text>
+        </Content>
+        
+        <Footer>
+          <FooterTab>
+            <Button block onPress={() => this._goToScreen()}>
+              <Text>START</Text>
+            </Button>
+          </FooterTab>
+        </Footer>
+      </Container>
+    )
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+export default WelcomeScreen
