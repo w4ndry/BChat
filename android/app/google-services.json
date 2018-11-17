@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "906168727214",
+    "firebase_url": "https://bchat-63501.firebaseio.com",
+    "project_id": "bchat-63501",
+    "storage_bucket": "bchat-63501.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906168727214:android:07b98d0801e5ee67",
+        "android_client_info": {
+          "package_name": "com.bchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "906168727214-u19rhg9j28dijk12u91fvmrfloudsmtk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bchat",
+            "certificate_hash": "50acff1491caf627fec72cada64fb78d73cc855e"
+          }
+        },
+        {
+          "client_id": "906168727214-vm9p33414758s0r2p6prgpm46rkhv7rc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkl4gdUzpYif19FfpXBoRA_nTzXamavn4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "906168727214-vm9p33414758s0r2p6prgpm46rkhv7rc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
