@@ -1,8 +1,10 @@
 import { Navigation } from "react-native-navigation"
+import { Provider } from 'react-redux'
 
-import { registerScreen } from './src/screens/'
+import store from './src/store/'
+import { registerScreens } from './src/screens/'
 
-registerScreen()
+registerScreens(store, Provider)
 
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setDefaultOptions({
