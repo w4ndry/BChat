@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { View, Keyboard } from 'react-native'
+import { Keyboard } from 'react-native'
 
 import { connect } from 'react-redux'
 import { Container, Content, Form, Item, Label, Input, Button, Text, Spinner, Icon  } from 'native-base'
@@ -48,8 +48,8 @@ class Login extends Component {
                                 onChangeText={(phone) => this.setState({phone})}
                                 onSubmitEditing={() => this.submit()} />
                         </Item>
-                            {error &&
-                            <Label style={{color: 'red', paddingLeft: 15}}>{errMessage}</Label>}
+                        {error &&
+                        <Label style={{color: 'red', paddingLeft: 15}}>{errMessage}</Label>}
                         <Button block disabled={isLoading} style={{marginTop: 20}} onPress={() => this.submit()}>
                             <Text>GO</Text>
                         </Button>
