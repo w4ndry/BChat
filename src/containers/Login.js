@@ -25,7 +25,10 @@ class Login extends Component {
             this.setState({isLoading: false, error: !error, errMessage: 'Phone can not be blank'})
         } else if (phone.length <= 9) {
             this.setState({isLoading: false, error: !error, errMessage: 'Phone number min 10 character'})            
+        } else {
+            this.props._goToScreen()
         }
+
     }
     
     render() {
